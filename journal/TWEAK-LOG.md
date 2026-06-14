@@ -4,6 +4,17 @@ Append-only, newest first. Each entry: date · what changed · why · result (fi
 
 ---
 
+## 2026-06-13 — tune: trimmed 46 → 40 (cut dead weight)
+**Change:** `/md-deck tune` cut 6 from main (46 → 40); extra untouched (15). Cuts: −1 Dark Magician of Chaos (40737112), −1 Magician of Chaos (47963370), −2 Bottomless Trap Hole (29401950), −1 Mulcharmy Fuwalos (3→2), −1 Soul Servant (3→2).
+**Why (verbatim card text, ygoprodeck API 2026-06-13):**
+- **DM of Chaos** — no Special Summon clause; name never becomes "Dark Magician"; *"If this face-up card would leave the field, banish it instead"* → can't even feed the GY. Enabled nothing.
+- **Magician of Chaos** — *"You can Ritual Summon this card with 'Chaos Form'"*; no Chaos Form in deck → un-castable, only Eternal-Soul discard fuel. Cut over adding Chaos Form (this was a trim, not an expand).
+- **Bottomless Trap Hole ×2** — *"When your opponent Summons a monster(s) with 1500 or more ATK"* — reactive, narrow, does nothing to effects / sub-1500 pieces; slow into HERO and Enneacraft (the two worst matchups).
+- **Mulcharmy Fuwalos 3→2** — going-second-only / dead on the play; 2 keeps the tool, lowers play-brick.
+- **Soul Servant 3→2** — the only judgment call; the 3rd copy is diminishing (one top-stack suffices; the GY-draw wants *different* names). Alternative considered: keep 3 Soul Servant, Fuwalos 3→1 — rejected because 2 Fuwalos has live targets in the SS-heavy meta.
+**Kept:** the Shining Sarcophagus sub-engine (Sarcophagus + DM the Magician of Black Magic + DMG the Magician's Apprentice) — the genuine upgrade carried over from the import.
+**Result:** tight 40 / 15 — pending live results. New `ydke://` in [[DECK-CURRENT]] + `deck-current.ydke.txt`.
+
 ## 2026-06-13 — imported live in-game deck (md-import pipeline established)
 **Change:** Replaced the Disruption v2 baseline as `deck-current` with the user's **actual in-game deck**, captured via the new `/md-import` skill + the DawnbrandBots deck-transfer browser extension (ydke export → paste → decode/verify/diff/version). 46 main / 15 extra. Saved faithfully — the user's exact alt-art passcodes preserved, not canonicalized — since this is a snapshot of what they actually run.
 **Diff vs baseline (Disruption v2, 40/15):**

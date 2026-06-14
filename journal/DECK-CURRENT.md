@@ -2,14 +2,13 @@
 
 `Last updated: 2026-06-13` · managed by the `/md-deck` + `/md-import` skills · pilot: Mr. Rocketship
 
-Import code (`deck-current.ydke.txt`) — captured from the live in-game deck via `/md-import`:
+Import code (`deck-current.ydke.txt`):
 ```
-ydke://r/TMAq/0zAKv9MwCR7zRBUe80QVHvNEFKpVlAWEYbABhGGwAYRhsALAj3gCwI94AsCPeADUHgwI1B4MCNQeDAqj50gGglAQC+CsmAJE6BQBYmW0C6tzbAvUquwD1KrsA9Sq7AAz6wwUM+sMFbjsbAAiP0AIIj9ACCI/QAgaHwQRdad4CPqRxAXhDXwF4Q18BeENfAQQdjAPEA1QBXqPAAV6jwAEiSJkAIkiZACJImQAK0OYCCtDmAg==!folDA0iIswDiBd8F4gXfBc83fgR6nXwCOcpgBNaQ/gLWkP4CUukRBbpiigO6YooD8bgeBY9ZCAUnCcAF!!
+ydke://r/TMAq/0zAKv9MwCR7zRBUe80QVHvNEFKpVlAWEYbABhGGwAYRhsALAj3gCwI94AsCPeADUHgwI1B4MCqPnSAaCUBAL4KyYAkToFAPUquwD1KrsA9Sq7AAz6wwUM+sMFbjsbAAiP0AIIj9ACCI/QAgaHwQRdad4CPqRxAXhDXwF4Q18BBB2MA8QDVAEiSJkAIkiZACJImQAK0OYCCtDmAg==!folDA0iIswDiBd8F4gXfBc83fgR6nXwCOcpgBNaQ/gLWkP4CUukRBbpiigO6YooD8bgeBY9ZCAUnCcAF!!
 ```
 
-> **Note (2026-06-13):** This file now reflects your **actual in-game deck (46 main / 15 extra)**,
-> imported via `/md-import`, replacing the earlier 40-card "Disruption v2" baseline. The diff and
-> rationale are in [[TWEAK-LOG]]. It is **46, not a tight 40** — see "Honest read" below.
+> **Status (2026-06-13):** Trimmed from the 46-card in-game import to a tight **40 main / 15 extra**
+> via `/md-deck tune`. Six cuts, five forced by card logic. Full diff + reasoning in [[TWEAK-LOG]].
 
 ## The honest ceiling (read this first)
 
@@ -23,19 +22,19 @@ Dark Magician is a **rogue / untiered** deck in Master Duel as of `2026-06-13` (
 
 Source: masterduelmeta tier list, observed 2026-06-13.
 
-## Honest read of this 46-card build (the upside and the dead weight)
+## What this 40 is (after the trim)
 
-**The good — a Shining Sarcophagus sub-engine.** You added a real package that fixes a prior soft spot:
-- **Shining Sarcophagus** (Continuous Spell) *"add 1 card that mentions 'Shining Sarcophagus' from your Deck to your hand"* — searches **DMG the Magician's Apprentice** (her printed search is no longer dead) **and Dark Magician the Magician of Black Magic.** It also disrupts: *"If your opponent Special Summons a monster(s) from the GY… discard 1 Spell, then target 1… send it to the GY"* (anti-Bystial / anti-revival).
-- **Dark Magician the Magician of Black Magic** (Lv7 DARK Spellcaster) — *"This card's name becomes 'Dark Magician' while on the field."* Free SS from hand *"If 'Shining Sarcophagus' is on the field,"* and when destroyed by effect with a Lv5+ monster out it *"Special Summon this card, then… Set 1 Spell/Trap from your Deck that mentions 'Dark Magician'"* (recovers Eternal Soul / Circle). A resilient extra DM-body — more density for Eternal Soul, Circle, and Eye/Gaze fusion.
+This keeps the **Shining Sarcophagus sub-engine** that the in-game build added — the genuinely good part — and removes the dead weight that was diluting the 46:
 
-**The dead weight — the two "Chaos" monsters (cut candidates, verbatim-verified):**
-- **Dark Magician of Chaos** (40737112, Lv8) is a **brick** here: no Special Summon clause (needs a tribute to Normal Summon), its name **never becomes "Dark Magician,"** and *"If this face-up card would leave the field, banish it instead"* — so it can't even feed the GY for Eternal Soul. It enables nothing in this deck.
-- **Magician of Chaos** (47963370, Lv7 Ritual) reads *"You can Ritual Summon this card with 'Chaos Form'"* — and **there is no Chaos Form in the deck**, so you can't hard-cast it. Its only use here is as **discard fuel**: get it to the GY (e.g. Apprentice Illusion Magician's discard cost), where *"This card's name becomes 'Dark Magician'… in the GY,"* then **Eternal Soul revives it** as a 2300 body with a once/turn Quick-Effect *"target 1 card on the field; destroy it."* Narrow and conditional. Either add Chaos Form to make it a real Ritual, or treat it as one-of Eternal-Soul fuel, or cut.
+**Kept — the Sarcophagus sub-engine.**
+- **Shining Sarcophagus** (Continuous Spell) *"add 1 card that mentions 'Shining Sarcophagus' from your Deck to your hand"* — searches **DMG the Magician's Apprentice** (her printed search is no longer dead) **and Dark Magician the Magician of Black Magic.** Also disrupts: *"If your opponent Special Summons a monster(s) from the GY… discard 1 Spell, then target 1… send it to the GY"* (anti-Bystial / anti-revival).
+- **Dark Magician the Magician of Black Magic** (Lv7 DARK Spellcaster) — *"name becomes 'Dark Magician' while on the field."* Free SS from hand *"If 'Shining Sarcophagus' is on the field,"* self-recurs + Sets a DM S/T from deck when destroyed by effect. A resilient extra DM-body for Eternal Soul, Circle, and Eye/Gaze fusion.
 
-**Consistency.** 46 main vs a tight 40 = ~6 extra non-starters, slightly lower odds of opening a starter. Fine for ladder; the first thing `/md-deck tune` would trim toward 40 is the Chaos pair + a Bottomless.
+**Cut (see [[TWEAK-LOG]] for the verbatim text behind each):** Dark Magician of Chaos (brick — no self-SS, never renames to DM, banishes itself instead of feeding the GY); Magician of Chaos (no Chaos Form in deck → un-castable, fuel-only); Bottomless Trap Hole ×2 (reactive/narrow, slow vs HERO & Enneacraft); Mulcharmy Fuwalos 3→2; Soul Servant 3→2. Nibiru was already cut in the import.
 
-## The deck (46 main / 15 extra)
+**Consistency.** Back to a tight 40 — starter density is up vs the 46, and you brick on going-second-only cards less often.
+
+## The deck (40 main / 15 extra)
 
 ### Engine / starters (what gives you a "do-something" hand)
 | # | Card | What it starts |
@@ -45,16 +44,16 @@ Source: masterduelmeta tier list, observed 2026-06-13.
 | 3 | **Magicians' Souls** | Send up to 2 S/T OR 1 DM/DMG from deck to GY + **draw 2**; or special a Lv6+ Spellcaster from hand. Fills GY + digs. |
 | 3 | **Illusion of Chaos** | Reveal in hand → add Dark Magician (or a card mentioning it) + place 1 from hand on top of deck. Quick effect: bounce itself, SS a DM from GY, **negate an opponent monster effect** — a built-in hand trap. |
 | 3 | **Dark Magical Circle** | On any DM summon: reveal top 3, add a DM-or-related. On activation: reveal top 3, and if a DM is there, **banish 1 card the opponent controls** — clean removal/out. |
-| 3 | **Soul Servant** | Stack the top of your deck with a DM-related card. GY: banish it → **draw = different DM/DMG/Palladium names on field + GY**. |
+| 2 | **Soul Servant** | Stack the top of your deck with a DM-related card. GY: banish it → **draw = different DM/DMG/Palladium names on field + GY**. (Trimmed 3→2.) |
 | 2 | **Preparation of Rites** | Search **Illusion of Chaos** (Lv≤7 Ritual) + recover a Ritual Spell from GY. Effectively copies your searcher. |
 | 1 | **Secrets of Dark Magic** | Quick-Play: Fusion **or** Ritual summon including DM/DMG from hand/field. Flexible instant-speed enabler. |
 
-### Shining Sarcophagus sub-engine (the new package)
+### Shining Sarcophagus sub-engine
 | # | Card | Role |
 |---|---|---|
-| 1 | **Shining Sarcophagus** | Continuous Spell; *"cannot be destroyed by monster effects."* Searches a "mentions Shining Sarcophagus" card (DMG the Magician's Apprentice / DM the Magician of Black Magic) + sends-to-GY any monster the opponent SS's from their GY. |
-| 1 | **DM the Magician of Black Magic** | Name = "Dark Magician" on field; free SS off Sarcophagus; self-recurs + Sets a DM S/T from deck when destroyed by effect. A resilient DM-body. |
-| 1 | **DMG the Magician's Apprentice** | SS by discarding 1; becomes "Dark Magician Girl." Her printed **Shining Sarcophagus search is now live** (resolves the old dead-card flag). Also a discard-enabler / Super Poly DARK Spellcaster body. |
+| 1 | **Shining Sarcophagus** | Continuous Spell; *"cannot be destroyed by monster effects."* Searches a "mentions Shining Sarcophagus" card + sends-to-GY any monster the opponent SS's from their GY. |
+| 1 | **DM the Magician of Black Magic** | Name = "Dark Magician" on field; free SS off Sarcophagus; self-recurs + Sets a DM S/T from deck when destroyed by effect. |
+| 1 | **DMG the Magician's Apprentice** | SS by discarding 1; becomes "Dark Magician Girl." Her **Shining Sarcophagus search is now live.** Also a discard-enabler / Super Poly DARK Spellcaster body. |
 
 ### The Eye / Gaze of Timaeus toolbox (the piloting key)
 **1x The Eye of Timaeus** (Normal) + **1x The Gaze of Timaeus** (Quick-Play, works from **field OR GY**, fusion banishes itself next End Phase — temporary). Each, off a **single Dark Magician**, can fusion-summon any DM-listing fusion using just that one body (single-material substitution). Pick the answer per matchup:
@@ -74,35 +73,30 @@ Source: masterduelmeta tier list, observed 2026-06-13.
 |---|---|---|
 | 3 | **Ash Blossom & Joyous Spring** | Negate a search / SS-from-deck / mill / draw. Universal "stop your one card." |
 | 3 | **Infinite Impermanence** | Negate a face-up monster effect (+ column-lock if you control no cards). **Careful vs face-down decks** — see [[MATCHUPS]] Enneacraft. |
-| 3 | **Mulcharmy Fuwalos** | Going-**second** only ("control no cards"): draw each time they SS from deck/Extra. **Dead on the play** — now at 3 (was 2); strong vs the SS-heavy field, but raises your brick-on-play rate. |
+| 2 | **Mulcharmy Fuwalos** | Going-**second** only ("control no cards"): draw each time they SS from deck/Extra. **Dead on the play** — at 2 (trimmed from 3). |
 | 1 | **Maxx "C"** | **Limited to 1 in Master Duel.** Draw per opponent Special Summon; taxes combo. |
 | 1 | **Bystial Magnamhut** | From hand: banish a LIGHT/DARK from a GY → SS this, search a Bystial / disrupt their GY. Also a DARK Dragon body for the Timaeus/Paladin Dragon clauses. |
 | 1 | **Called by the Grave** | Answer their **Maxx "C"** on your turn, and their GY effects. |
 | 1 | **Super Polymerization** | *"Neither player can activate cards or effects in response."* Uninterruptible — steal an opponent monster as fusion material (Mudragon / Garura). Target math in [[MATCHUPS]]. |
-| 2 | **Bottomless Trap Hole** | *"When your opponent Summons a monster(s) with 1500+ ATK: destroy… and banish it."* Honest caveat: **reactive and narrow** — only fires on a 1500+ ATK *summon*, does nothing to effects or sub-1500 combo pieces. **Slow into HERO and Enneacraft** (your two worst matchups). Top trim candidate. |
-
-> **Note: Nibiru was cut** in this build (was 1 in the baseline) — it only shone vs 5+ summon boards.
 
 ### Backbone traps
 | # | Card | Role |
 |---|---|---|
-| 2 | **Eternal Soul** | DM in your zone is **unaffected by opponent's effects**; once/turn SS a DM from hand/GY, or add Dark Magic Attack/Thousand Knives. **Downside:** if it leaves the field, *destroy all your monsters* — don't let it get bounced into a full board. Note: it can revive **Magician of Chaos** out of the GY (name = DM there). |
+| 2 | **Eternal Soul** | DM in your zone is **unaffected by opponent's effects**; once/turn SS a DM from hand/GY, or add Dark Magic Attack/Thousand Knives. **Downside:** if it leaves the field, *destroy all your monsters* — don't let it get bounced into a full board. |
 
 ### Other main-deck bodies
-- **1x Apprentice Illusion Magician** (DARK, 2000) — discard 1 to SS, on summon add a Dark Magician. A DARK Spellcaster for Super Poly (Mudragon), a 2000 beater, and the **discard outlet** that turns Magician of Chaos into Eternal-Soul fuel.
-- **1x Dark Magician of Chaos** — see "dead weight" above. Brick; cut candidate.
-- **1x Magician of Chaos** — see "dead weight" above. Discard-and-revive fuel only (no Chaos Form).
+- **1x Apprentice Illusion Magician** (DARK, 2000) — discard 1 to SS, on summon add a Dark Magician. A DARK Spellcaster for Super Poly (Mudragon), a 2000 beater, and a discard outlet.
 
 ### Extra deck (15)
-2x Dark Magician of Destruction · 2x The Dark Magicians · 2x Dark Paladin · 1x Dark Cavalry · 1x DM the Dragon Knight · 1x Amulet Dragon · 1x Master of Chaos · 1x Timaeus the United · 1x Mudragon of the Swamp · 1x Garura · 1x Ebon Illusion Magician · **1x Quintet Magician** *(replaced Selene)*.
+2x Dark Magician of Destruction · 2x The Dark Magicians · 2x Dark Paladin · 1x Dark Cavalry · 1x DM the Dragon Knight · 1x Amulet Dragon · 1x Master of Chaos · 1x Timaeus the United · 1x Mudragon of the Swamp · 1x Garura · 1x Ebon Illusion Magician · 1x Quintet Magician.
 
 - **Mudragon** = Super Poly target for "same Attribute, **different** Types" (your DARK Spellcaster + their DARK Warrior HERO).
 - **Garura** = Super Poly target for "same Type **and** Attribute, different names."
-- **Quintet Magician** (Lv12 Fusion, *"5 Spellcaster monsters"*) — *"If… Fusion Summoned using 5 Spellcaster monsters with different names: destroy all cards your opponent controls,"* and it *"cannot be destroyed by card effects."* A hard board-wipe finisher, but **demanding (5 different-named Spellcasters)** — a grind-game payoff, not a turn-1 play.
+- **Quintet Magician** (Lv12 Fusion, *"5 Spellcaster monsters"*) — *"destroy all cards your opponent controls"* if fused with 5 different-named Spellcasters, and *"cannot be destroyed by card effects."* A grind-game board-wipe finisher, demanding (5 materials) — not a turn-1 play.
 - **Ebon Illusion Magician** (Rank 7) = extender/recursion off two Level-7 Spellcasters.
 
 ## 1-card openers
-Any **one** of these is a real opening: Magician's Rod, Magicians' Souls, Illusion of Chaos, Dark Magical Circle, Soul Servant, or Preparation of Rites (→ Illusion of Chaos). Starter count is ≈18-19 — but spread over 46 cards, so density is slightly lower than the 40-card version.
+Any **one** of these is a real opening: Magician's Rod, Magicians' Souls, Illusion of Chaos, Dark Magical Circle, Soul Servant, or Preparation of Rites (→ Illusion of Chaos). With the trim, starter density is back up (~16-18 starters over 40).
 
 - **Rod line:** NS Rod → search **Eternal Soul** → Eternal Soul SS Dark Magician → Circle banish / Eye into a negate body.
 - **Souls line:** Souls send DM to GY + draw 2 → Eternal Soul revives DM → Circle.
@@ -112,16 +106,15 @@ Any **one** of these is a real opening: Magician's Rod, Magicians' Souls, Illusi
 
 ## Mulligan / keep guide
 - **On the draw:** keep any hand with **a starter + a disruption** (Ash / Imperm).
-- **On the play:** want a starter that ends on **Eternal Soul + Circle**. **Mulcharmy Fuwalos is dead on the play** — and at 3 copies you'll brick on it more often, so don't keep a hand leaning on it as your interaction.
+- **On the play:** want a starter that ends on **Eternal Soul + Circle**. **Mulcharmy Fuwalos is dead on the play** — don't keep a hand leaning on it as your interaction.
 - **Going second into a known combo deck:** Fuwalos + Ash + Imperm is a great "break their turn" hand.
-- **Reject** hands that are all bodies + no starter and no disruption (and watch for clogging on the Chaos pair).
+- **Reject** hands that are all bodies + no starter and no disruption.
 
-## Known soft spots (candidates for `tune`)
-- **Dark Magician of Chaos (40737112)** — brick, enables nothing. Strongest cut.
-- **Magician of Chaos (47963370)** — no Chaos Form in deck; only Eternal-Soul fuel. Add Chaos Form or cut.
-- **Bottomless Trap Hole x2** — reactive/narrow, slow into HERO & Enneacraft. Trim toward 40.
-- **3x Mulcharmy Fuwalos** — pure going-second; some metas want it at 2.
-- Trimming the above is the obvious **46 → 40** path if you want the tighter, more consistent build back.
+## Known soft spots (candidates for the next `tune`)
+- **Super Polymerization at 1** — vs a Fusion-heavy meta could go to 2; vs a low-fusion meta it's a luxury.
+- **Quintet Magician** — high payoff, hard to assemble (5 Spellcasters); earns its slot only in grind games.
+- **Bystial Magnamhut at 1** — strong vs DARK/LIGHT GY decks (incl. some HERO lines); the meta could justify a 2nd.
+- If HERO / Enneacraft keep beating you, the lever is more *unaffected/uninterruptible* outs (Timaeus lines, a 2nd Super Poly), not more reactive traps — log the losses and `/md-deck tune` will weigh it.
 
 ## Craft reference
 Full owned-cards + rarity list is in `collection-reference.csv` (N/R/SR/UR = craft cost). **Caveat:** that CSV lists Maxx "C" x3 — illegal (Limited 1). The live, legal list is this file + `deck-current.ydk`.
