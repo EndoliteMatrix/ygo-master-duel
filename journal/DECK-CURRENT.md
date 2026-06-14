@@ -1,5 +1,6 @@
-# DECK-CURRENT — Dark Magician (Sarcophagus / Disruption build)
+# DECK-CURRENT — "Eternal Sarcophagus" (Dark Magician control / disruption)
 
+**Deck name:** Eternal Sarcophagus — use this in-game so the journal, deck file, and client all match.
 `Last updated: 2026-06-13` · managed by the `/md-deck` + `/md-import` skills · pilot: Mr. Rocketship
 
 Import code (`deck-current.ydke.txt`):
