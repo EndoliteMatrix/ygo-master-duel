@@ -4,6 +4,14 @@ Append-only, newest first. Each entry: date · what changed · why · result (fi
 
 ---
 
+## 2026-06-14 — tune: −2 Mulcharmy Fuwalos, +Droll & Lock Bird, +Dark Magic Attack (fix HERO/Enneacraft)
+**Change:** Main stays 40. Cut 2x Mulcharmy Fuwalos (42141493); add 1x Droll & Lock Bird (94145021 — craft) + 1x Dark Magic Attack (2314238 — owned).
+**Why:** Three-agent reconsideration (md-meta-researcher + md-matchup-analyst ×2, 2026-06-14). Field reframe: **Enneacraft is #1 played (10.85%), HERO is rare (Trending)**. User **always goes second** — so Fuwalos isn't "dead on the play" (that reasoning was corrected), BUT it's still weak vs the two low-summon decks beating him; it IS good vs the fast combo decks he chose to deprioritize. Droll = double-duty premium vs Enneacraft + HERO + Kewl Tune + Branded (the whole field runs deck-to-hand searches). Dark Magic Attack = the Enneapolis answer (destroys their sitting S/T incl. Pendulum-zone Enneacrafts), owned/free, also searchable off Eternal Soul.
+**Did NOT add (over-tech, per meta agent's warning):** 2nd Super Poly / Ghost Belle / Raigeki / 2nd DMG Apprentice / Dimensional Barrier — narrow, HERO-specific (HERO is rare), or 600 CP. Logged as situational pickups.
+**Verified this session (ygoprodeck API):** Master of Chaos (85059922) IS Eye/Gaze-summonable off one DM (Eye lists "Dark Magician" as material, uses the single DM) — its banish-all costs tributing 1 LIGHT + 1 DARK (DMG Apprentice = the only LIGHT). HERO now runs a 2nd boss, **DPE (60461804)** off Fusion Destiny — non-targeting pop kills Eternal Soul → your DM; only **Timaeus** (unaffected) survives it, NOT Dark Cavalry. Enneacraft runs **Dimension Shifter ×3** (banishes your GY → Eternal Soul loop dies). **Imperm is DEAD** vs their face-down board (no face-up target) — NOT a "backfire" (brief corrected).
+**Direction:** Eye/Gaze-lean, Dark-Paladin-centered — the toolbox IS the centering; no 3rd Paladin (would eat the Timaeus / Master-of-Chaos slots that win the two bad matchups).
+**Result:** 40/15 — pending live results. New `ydke://` in [[DECK-CURRENT]].
+
 ## 2026-06-13 — tune: trimmed 46 → 40 (cut dead weight)
 **Change:** `/md-deck tune` cut 6 from main (46 → 40); extra untouched (15). Cuts: −1 Dark Magician of Chaos (40737112), −1 Magician of Chaos (47963370), −2 Bottomless Trap Hole (29401950), −1 Mulcharmy Fuwalos (3→2), −1 Soul Servant (3→2).
 **Why (verbatim card text, ygoprodeck API 2026-06-13):**

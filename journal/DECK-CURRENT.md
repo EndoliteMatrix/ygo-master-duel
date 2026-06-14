@@ -1,11 +1,11 @@
 # DECK-CURRENT — "Eternal Sarcophagus" (Dark Magician control / disruption)
 
 **Deck name:** Eternal Sarcophagus — use this in-game so the journal, deck file, and client all match.
-`Last updated: 2026-06-13` · managed by the `/md-deck` + `/md-import` skills · pilot: Mr. Rocketship
+`Last updated: 2026-06-14` · managed by the `/md-deck` + `/md-import` skills · pilot: Mr. Rocketship
 
 Import code (`deck-current.ydke.txt`):
 ```
-ydke://r/TMAq/0zAKv9MwCR7zRBUe80QVHvNEFKpVlAWEYbABhGGwAYRhsALAj3gCwI94AsCPeADUHgwI1B4MCqPnSAaCUBAL4KyYAkToFAPUquwD1KrsA9Sq7AAz6wwUM+sMFbjsbAAiP0AIIj9ACCI/QAgaHwQRdad4CPqRxAXhDXwF4Q18BBB2MA8QDVAEiSJkAIkiZACJImQAK0OYCCtDmAg==!folDA0iIswDiBd8F4gXfBc83fgR6nXwCOcpgBNaQ/gLWkP4CUukRBbpiigO6YooD8bgeBY9ZCAUnCcAF!!
+ydke://r/TMAq/0zAKv9MwCR7zRBUe80QVHvNEFKpVlAWEYbABhGGwAYRhsALAj3gCwI94AKj50gGglAQC+CsmAJE6BQD1KrsA9Sq7APUquwAM+sMFDPrDBW47GwAIj9ACCI/QAgiP0AIGh8EEXWneAj6kcQF4Q18BeENfAQQdjAPEA1QBIkiZACJImQAiSJkACtDmAgrQ5gL9iZwF/k8jAA==!folDA0iIswDiBd8F4gXfBc83fgR6nXwCOcpgBNaQ/gLWkP4CUukRBbpiigO6YooD8bgeBY9ZCAUnCcAF!!
 ```
 
 > **Status (2026-06-13):** Trimmed from the 46-card in-game import to a tight **40 main / 15 extra**
@@ -73,12 +73,13 @@ This keeps the **Shining Sarcophagus sub-engine** that the in-game build added �
 | # | Card | Role |
 |---|---|---|
 | 3 | **Ash Blossom & Joyous Spring** | Negate a search / SS-from-deck / mill / draw. Universal "stop your one card." |
-| 3 | **Infinite Impermanence** | Negate a face-up monster effect (+ column-lock if you control no cards). **Careful vs face-down decks** — see [[MATCHUPS]] Enneacraft. |
-| 2 | **Mulcharmy Fuwalos** | Going-**second** only ("control no cards"): draw each time they SS from deck/Extra. **Dead on the play** — at 2 (trimmed from 3). |
+| 3 | **Infinite Impermanence** | Negate a face-up monster effect (+ column-lock if you control no cards). **DEAD vs Enneacraft's face-down board** (it needs a face-up target) — but great vs everything that plays face-up. See [[MATCHUPS]]. |
+| 1 | **Droll & Lock Bird** | Hand trap. After the opponent's first deck-to-hand search, locks ALL further searches (both players) for the rest of the turn — so fire it AFTER your own searches resolve. Double-duty vs Enneacraft, HERO, Kewl Tune, Branded (the whole field searches). Added 2026-06-14 over 2x Fuwalos. |
 | 1 | **Maxx "C"** | **Limited to 1 in Master Duel.** Draw per opponent Special Summon; taxes combo. |
 | 1 | **Bystial Magnamhut** | From hand: banish a LIGHT/DARK from a GY → SS this, search a Bystial / disrupt their GY. Also a DARK Dragon body for the Timaeus/Paladin Dragon clauses. |
 | 1 | **Called by the Grave** | Answer their **Maxx "C"** on your turn, and their GY effects. |
 | 1 | **Super Polymerization** | *"Neither player can activate cards or effects in response."* Uninterruptible — steal an opponent monster as fusion material (Mudragon / Garura). Target math in [[MATCHUPS]]. |
+| 1 | **Dark Magic Attack** | Control a Dark Magician → **destroy ALL their face-up Spells/Traps.** Your Enneapolis answer (their Pendulum-zone Enneacrafts sit in the S/T zone, so it nukes those too). Also searchable off Eternal Soul. Added 2026-06-14. |
 
 ### Backbone traps
 | # | Card | Role |
@@ -107,8 +108,8 @@ Any **one** of these is a real opening: Magician's Rod, Magicians' Souls, Illusi
 
 ## Mulligan / keep guide
 - **On the draw:** keep any hand with **a starter + a disruption** (Ash / Imperm).
-- **On the play:** want a starter that ends on **Eternal Soul + Circle**. **Mulcharmy Fuwalos is dead on the play** — don't keep a hand leaning on it as your interaction.
-- **Going second into a known combo deck:** Fuwalos + Ash + Imperm is a great "break their turn" hand.
+- **On the play:** want a starter that ends on **Eternal Soul + Circle**.
+- **Going second (your default):** a "break their turn" hand = a starter + Ash/Droll/Imperm. Hold **Droll** until after the opponent's first search, or you lock your own engine too.
 - **Reject** hands that are all bodies + no starter and no disruption.
 
 ## Known soft spots (candidates for the next `tune`)
