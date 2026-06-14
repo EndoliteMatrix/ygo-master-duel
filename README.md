@@ -29,7 +29,7 @@ YGO/
 │   ├── ydk_codec.py            name↔passcode, .ydk↔ydke, MD-legality
 │   └── card-id-cache.json      passcode cache, seeded FROM the ygoprodeck API
 ├── skills/                    ← reference copies of the installed Claude Code skills
-│   └── md-deck|md-meta|md-patch|md-ydk / SKILL.md
+│   └── md-deck|md-meta|md-patch|md-ydk|md-import / SKILL.md
 └── agents/                    ← reference copies of the installed agents
     └── md-meta-researcher | md-matchup-analyst | md-banlist-watcher | ygo-card-resolver .md
 ```
@@ -50,6 +50,11 @@ versioned source of record. To re-install (or move to another machine), copy the
 - **`/md-patch`** — show the patch/banlist/season; `check` re-pulls it and flags anything
   that touches your cards or the top decks.
 - **`/md-ydk`** — the deck-file codec (below).
+- **`/md-import`** — the one-step front door for capturing a finished deck: paste a `ydke://`
+  (exported from the [deck-transfer browser extension](https://github.com/DawnbrandBots/deck-transfer-for-master-duel))
+  and it decodes, verifies, cross-checks the banlist, diffs against your current deck, writes
+  it in as `deck-current`, logs the change, and offers to commit. Master Duel has no public
+  API — this is how an in-game deck change gets captured without re-typing it.
 
 ### Agents (hard-mode researchers the skills call)
 `md-meta-researcher`, `md-matchup-analyst`, `md-banlist-watcher`, `ygo-card-resolver` —
